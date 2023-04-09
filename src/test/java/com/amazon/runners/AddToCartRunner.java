@@ -1,4 +1,4 @@
-package runners;
+package com.amazon.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -6,9 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/java/features",
-        glue = "src.test.java.stepdefinitions",
-        plugin = {"pretty", "html:target/cucumber-reports"}
+        plugin = {"pretty","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},
+        features = "src/test/java/com/amazon/features",
+        glue = "com.amazon.stepdefinitions"
 )
 
 public class AddToCartRunner {

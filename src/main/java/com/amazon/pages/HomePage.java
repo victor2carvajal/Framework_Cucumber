@@ -3,14 +3,15 @@ package com.amazon.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class home_page {
+public class HomePage {
 
     WebDriver driver;
-
     By search_TXT = By.id("twotabsearchtextbox");
     By submitBTN = By.id("nav-search-submit-button");
-    
-    public home_page(){}
+
+    public HomePage(WebDriver driver){
+        this.driver = driver;
+    }
 
     public void openPage(String url){
         driver.get(url);
